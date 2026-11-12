@@ -179,26 +179,6 @@ h1, h2, h3, p { margin: 0; }
 .sec-title--sm { font-size: 19px; }
 .sec-title--md { font-size: 22px; padding: 12px 6px; }
 
-/* ---------- お客様の声（CSSスライダー） ---------- */
-.sec--voice { background: var(--yellow-light); }
-.voice__track {
-  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px;
-  scrollbar-width: none;
-}
-.voice__track::-webkit-scrollbar { display: none; }
-.voice__item { flex: 0 0 100%; scroll-snap-align: center; height: 520px; background-color: #fff; }
-.voice__hint { text-align: center; font-size: 13px; color: #8a7a20; margin-top: 10px; font-weight: 700; }
-
-/* ---------- 対応症状 ---------- */
-.sec--symptom { background: var(--yellow); }
-.symptom { display: grid; grid-template-columns: 1fr 1fr; gap: 38px 22px; }
-.symptom li { display: flex; height: 108px; border-radius: 22px; overflow: hidden; background: var(--navy); }
-.symptom .ph { flex: 0 0 60%; padding: 0; }
-.symptom span {
-  flex: 1; display: grid; place-items: center; text-align: center;
-  color: #fff; font-weight: 700; font-size: 12px; letter-spacing: .1em; line-height: 1.5; padding: 4px;
-}
-
 /* ---------- 予約の流れ ---------- */
 .sec--flow {
   background-color: #f9fbfc;
