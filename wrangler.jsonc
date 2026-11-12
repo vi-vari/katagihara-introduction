@@ -2,6 +2,8 @@
   // Cloudflare Workers（静的サイト）設定
   "name": "katagihara-introduction",
   "compatibility_date": "2026-11-01",
+  // workers.dev の公開URLを有効にする
+  "workers_dev": true,
   "assets": {
     "directory": "."
   }
