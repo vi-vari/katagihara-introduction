@@ -324,3 +324,11 @@ h1, h2, h3, p { margin: 0; }
 .inside__img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-bottom: 2px solid #fff; }
 .process__img { width: 100%; height: 210px; object-fit: cover; object-position: center 35%; border-radius: 8px; }
 .process__img--full { height: auto; aspect-ratio: 549 / 414; }
+
+/* 選ばれる理由：見出し → 文章 → 写真 の順 */
+.reason__item { padding: 0 6px 22px; }
+.reason__item + .reason__img { margin-bottom: 56px; }
+.reason__img:last-child { margin-bottom: 0; }
+.reason h3 { font-size: 22px; margin: 0 0 10px; }
+.reason h3 span { color: var(--orange); font-size: 30px; }
+.reason__item > p:last-child { font-size: 16px; }
