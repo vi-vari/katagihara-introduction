@@ -332,3 +332,171 @@ h1, h2, h3, p { margin: 0; }
 .reason h3 { font-size: 22px; margin: 0 0 10px; }
 .reason h3 span { color: var(--orange); font-size: 30px; }
 .reason__item > p:last-child { font-size: 16px; }
+
+/* ヘッダーのLINEボタン（PCのみ表示） */
+.header__line { display: none; }
+
+/* =========================================
+   PC表示（画面幅768px以上）
+   ========================================= */
+@media (min-width: 768px) {
+  :root { --wrap: 960px; }
+  body { background: var(--bg); }
+  .page { max-width: none; padding-bottom: 110px; }
+
+  /* ヘッダー */
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px max(24px, calc((100% - var(--wrap)) / 2));
+    background: #fff;
+  }
+  .logo { font-size: 26px; }
+  .logo small { font-size: 16px; }
+  .header__line {
+    display: flex; align-items: center; gap: 10px; background: var(--line); color: #fff;
+    border-radius: 6px; padding: 8px 18px 8px 10px; font-family: var(--round); font-weight: 800; font-size: 15px; line-height: 1.3;
+    transition: transform .15s;
+  }
+  .header__line:hover { transform: translateY(-2px); }
+  .header__line small { display: block; background: #fff; color: #ff6b8b; font-size: 11px; padding: 0 6px; margin-bottom: 2px; }
+  .header__line-icon {
+    width: 40px; height: 40px; border-radius: 10px; background: #fff; color: var(--line);
+    font-size: 10px; display: grid; place-items: center;
+  }
+
+  /* メインビジュアル：左に文字、右に写真 */
+  .hero {
+    display: grid; grid-template-columns: 1fr 1.15fr; column-gap: 32px; align-items: center;
+    padding: 70px max(24px, calc((100% - var(--wrap)) / 2)) 60px;
+  }
+  .hero__flags { height: 44px; background-size: 88px 100%; }
+  .hero__flags::after { background-size: 88px 100%; background-position: 44px 0; }
+  .hero__lead, .hero__title, .hero__sub, .hero__badge { grid-column: 1; }
+  .hero__lead { font-size: 22px; }
+  .hero__title { font-size: 54px; }
+  .hero__sub { font-size: 32px; margin-bottom: 26px; }
+  .hero__img {
+    grid-column: 2; grid-row: 1 / span 4; height: 420px; border-radius: 24px;
+    box-shadow: 0 10px 0 var(--orange-deep);
+  }
+  .hero__badge { margin: 0 auto; width: 100%; max-width: 380px; border-radius: 20px; }
+  .hero__badge-off b { font-size: 72px; }
+
+  /* 特典 */
+  .benefit { max-width: 860px; margin: 0 auto; padding: 40px 60px 50px; }
+  .ribbon { max-width: 600px; margin: 0 auto 40px; }
+  .ribbon span { font-size: 30px; padding: 14px 0; }
+  .benefit__main { padding: 30px 20px 22px; }
+  .benefit__name { font-size: 36px; }
+  .benefit__price b { font-size: 120px; }
+  .benefit__price span { font-size: 52px; }
+  .benefit__note { font-size: 13px; }
+  .benefit__list { grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+  .benefit__list li { font-size: 15px; padding: 24px 22px 20px 34px; }
+
+  /* CTAボタン：横並び */
+  .cta {
+    grid-template-columns: 1.3fr 1fr; align-items: center; gap: 24px;
+    max-width: 860px; margin: 0 auto; padding: 80px 24px;
+  }
+  .btn-web { padding: 30px 16px; font-size: 22px; }
+
+  /* 見出し */
+  .sec { padding: 90px max(24px, calc((100% - var(--wrap)) / 2)); }
+  .sec-title { max-width: 600px; margin: 0 auto 56px; font-size: 34px; padding: 14px 10px; }
+  .sec-title--md { font-size: 30px; }
+  .sec-title--sm { font-size: 28px; }
+
+  /* 予約・無料相談の流れ：横並び */
+  .steps { grid-template-columns: repeat(5, auto); justify-content: center; align-items: start; column-gap: 28px; }
+  .steps li + li::before { display: none; }
+  .steps li:not(:last-child) { position: relative; }
+  .steps li:not(:last-child)::after {
+    content: ""; position: absolute; right: -66px; top: 58px; width: 56px; height: 56px; background: var(--orange);
+    clip-path: polygon(0 30%, 45% 30%, 45% 0, 100% 50%, 45% 100%, 45% 70%, 0 70%);
+  }
+  .steps { display: flex; gap: 104px; }
+
+  /* 心配ごと */
+  .worry { max-width: 680px; margin: 0 auto; gap: 48px; }
+  .worry li { padding: 20px 24px 20px 16px; }
+  .worry__face { flex-basis: 120px; font-size: 84px; }
+  .worry__q { font-size: 17px; }
+  .worry__a { font-size: 15px; }
+
+  /* 選ばれる理由：文章と写真を左右交互に */
+  .reason { max-width: 900px; margin: 90px auto; padding: 60px 60px 70px; }
+  .reason .sec-title { margin-bottom: 60px; }
+  .reason {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; row-gap: 70px; align-items: center;
+  }
+  .reason .sec-title { grid-column: 1 / -1; width: 100%; }
+  .reason__item { padding: 0; }
+  .reason__item + .reason__img { margin: 0; }
+  .reason__img { height: 280px; }
+  /* 2つ目は写真を左、文章を右に */
+  .reason__item:nth-of-type(2) { grid-column: 2; grid-row: 3; }
+  .reason__img:nth-of-type(2) { grid-column: 1; grid-row: 3; }
+  .reason h3 { font-size: 26px; }
+  .reason h3 span { font-size: 36px; }
+  .reason__item > p:last-child { font-size: 17px; }
+
+  /* 施術の流れ：文章左、写真右 */
+  .sec--process {
+    padding: 90px max(24px, calc((100% - 760px) / 2)) 40px;
+    background: linear-gradient(var(--yellow-light) 0 240px, transparent 240px);
+  }
+  .sec--process .sec-title { margin: 0 auto 30px; }
+  .process li {
+    display: grid; grid-template-columns: 1fr 300px; grid-template-rows: auto 1fr; column-gap: 40px;
+    padding: 40px 0 46px;
+  }
+  .process li + li { padding-top: 60px; }
+  .process__img, .process__img--full { grid-column: 2; grid-row: 1 / span 2; height: 200px; aspect-ratio: auto; border-radius: 16px; }
+  .process__img--full { object-position: left top; }
+  .process h3 { grid-column: 1; grid-row: 1; align-self: end; margin: 0 0 10px; font-size: 26px; }
+  .process p { grid-column: 1; grid-row: 2; margin: 0; font-size: 16px; font-weight: 500; }
+
+  /* 院情報：写真に情報カードを重ねる */
+  .access {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 12px;
+    max-width: var(--wrap); margin: 0 auto; padding: 100px 24px 40px;
+  }
+  .access__img { grid-column: 1 / -1; width: 72%; margin: 0; height: 420px; aspect-ratio: auto; border-radius: 12px; }
+  .access__card {
+    grid-column: 1 / -1; grid-row: 1; align-self: end; justify-self: end; width: 46%;
+    margin: 0 0 -30px; background: #fff; padding: 22px 30px; position: relative;
+  }
+  .access__name { font-size: 24px; }
+  .access__addr { font-size: 15px; }
+  .access__tel { font-size: 36px; text-align: left; }
+  .hours__title { grid-column: 1 / -1; margin-top: 60px; font-size: 17px; }
+  .hours { grid-column: 1 / -1; margin-bottom: 24px; font-size: 16px; }
+  .inside__img { border-radius: 10px; border: 0; }
+
+  .band { height: 120px; }
+  .footer { font-size: 16px; padding: 40px 0; }
+
+  /* 画面下の固定バー */
+  .fixed-bar { max-width: 640px; border-radius: 14px 14px 0 0; padding: 10px 14px; }
+  .fixed-bar a { min-height: 70px; }
+  .fixed-bar__line { font-size: 16px; }
+  .fixed-bar__line small { font-size: 12px; }
+  .fixed-bar__web { font-size: 18px; }
+
+  .modal__box { max-width: 560px; padding: 24px; }
+  .modal__text { font-size: 32px; }
+  .modal__btn { font-size: 18px; padding: 10px 40px; }
+}
+
+/* PC表示の微調整 */
+@media (min-width: 768px) {
+  .reason .sec-title { margin: 0 auto 10px; }
+  .access__img { grid-row: 1; }
+  .access__card { margin-bottom: -40px; }
+  .process h3 { align-self: center; }
+  .process li { grid-template-rows: 1fr auto 1fr; }
+  .process h3 { grid-row: 1; align-self: end; }
+  .process p { grid-row: 2; }
+  .process__img, .process__img--full { grid-row: 1 / span 3; }
+}
