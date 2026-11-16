@@ -591,3 +591,7 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 @media (min-width: 768px) { .reason__img:not(:last-child) { margin-bottom: 0; } }
 .reason h3 { line-height: 1.4; }
 @media (max-width: 420px) { .sec-title--sm { font-size: 16px; letter-spacing: -.02em; padding: 12px 4px; white-space: nowrap; } }
+/* 施術写真：先生の顔と患者さんが入るように */
+.process__img--seitai { object-position: 60% 45%; }
+@media (min-width: 768px) { .process__img--seitai { object-position: 70% 40%; } }
+.process__img--seitai { height: auto !important; aspect-ratio: 4 / 3 !important; object-position: center !important; }
