@@ -594,4 +594,5 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 /* 施術写真：先生の顔と患者さんが入るように */
 .process__img--seitai { object-position: 60% 45%; }
 @media (min-width: 768px) { .process__img--seitai { object-position: 70% 40%; } }
-.process__img--seitai { height: auto !important; aspect-ratio: 4 / 3 !important; object-position: center !important; }
+/* 施術写真：他の写真と同じサイズで、先生の顔が入るよう上寄せ */
+.process__img--seitai { object-position: 50% 0% !important; }
