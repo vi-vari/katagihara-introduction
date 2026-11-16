@@ -571,3 +571,6 @@ h1, h2, h3, p { margin: 0; }
   .fixed-bar { max-width: 480px; }
   .fixed-bar__line { font-size: 17px; }
 }
+@media (max-width: 420px) {
+  .worry__q { font-size: 13px; padding: 12px 6px; letter-spacing: -.02em; }
+}
