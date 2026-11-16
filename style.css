@@ -574,3 +574,15 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 420px) {
   .worry__q { font-size: 13px; padding: 12px 6px; letter-spacing: -.02em; }
 }
+
+/* 心配ごと：人物イラスト */
+img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-end; margin-bottom: -14px; }
+@media (min-width: 768px) {
+  img.worry__face { flex-basis: 130px; width: 130px; margin-bottom: -20px; }
+}
+.worry__body { align-self: flex-start; padding-bottom: 6px; }
+.worry li { min-height: 0; }
+@media (min-width: 768px) {
+  img.worry__face { flex-basis: 104px; width: 104px; margin-bottom: -20px; }
+  .worry__a { font-size: 16px; }
+}
