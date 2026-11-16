@@ -619,3 +619,10 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .hero__garland { z-index: 2 !important; }
   .hero__photo { z-index: 3 !important; }
 }
+/* PC：人物を今より約1/4小さく */
+@media (min-width: 768px) {
+  .hero { height: clamp(500px, 42vw, 680px); }
+  .hero__photo { width: 46%; transform: translateX(-28%); }
+  .hero__copy { top: 20%; }
+  .hero__badge { left: 36%; bottom: 7%; }
+}
