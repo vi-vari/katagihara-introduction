@@ -597,3 +597,25 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 /* 施術写真：他の写真と同じサイズで、先生の顔が入るよう上寄せ */
 .process__img--seitai { object-position: 50% 15% !important; }
 .process__img--checkout { object-position: 50% 30%; }
+
+/* ===== FV 人物を大きく（2026-11 調整） ===== */
+/* スマホ：人物を下の帯まで下げ、画面幅いっぱいに */
+@media (max-width: 767px) {
+  .hero { min-height: 0; padding-bottom: 0; }
+  .hero__photo { margin: 18px 0 0; }
+  .hero__img { width: 100%; max-width: none; display: block; }
+  .hero__badge { bottom: 26px; padding: 8px 22px 6px; min-width: 230px; }
+  .hero__badge-off b { font-size: 50px; }
+  .hero__badge-note { bottom: -24px; }
+}
+/* PC：人物を大きく */
+@media (min-width: 768px) {
+  .hero { height: clamp(560px, 50vw, 800px); }
+  .hero__photo { width: 60%; left: 50%; transform: translateX(-30%); bottom: 0; }
+  .hero__copy { top: 22%; left: 3%; }
+  .hero__badge { left: 32%; bottom: 8%; transform: translateX(-50%); }
+}
+@media (min-width: 768px) {
+  .hero__garland { z-index: 2 !important; }
+  .hero__photo { z-index: 3 !important; }
+}
