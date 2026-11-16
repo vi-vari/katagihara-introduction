@@ -538,3 +538,17 @@ h1, h2, h3, p { margin: 0; }
   .hero__copy { left: 11%; top: 21%; }
   .hero__circle--1 { left: 8%; top: 0; }
 }
+/* 人物を中央に、文字は人物より手前に表示 */
+.hero__copy { z-index: 4 !important; }
+@media (min-width: 768px) {
+  .hero__photo { right: auto; left: 50%; transform: translateX(-38%); width: 44%; }
+  .hero__copy { left: 4%; top: 22%; }
+  .hero__badge { left: 50%; }
+  .hero__circle--1 { left: 2%; }
+  .hero__circle--2 { left: 38%; }
+}
+@media (min-width: 768px) {
+  .hero__photo { transform: translateX(-33%); width: 42%; }
+  .hero__title { font-size: clamp(40px, 4.3vw, 64px); }
+  .hero__copy { left: 3%; top: 20%; }
+}
