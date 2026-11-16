@@ -552,3 +552,13 @@ h1, h2, h3, p { margin: 0; }
   .hero__title { font-size: clamp(40px, 4.3vw, 64px); }
   .hero__copy { left: 3%; top: 20%; }
 }
+
+/* Web予約ボタン削除後：LINEボタンのみ */
+@media (min-width: 768px) {
+  .cta { grid-template-columns: 1fr; max-width: 620px; }
+}
+.hero__badge-main, .benefit__name { white-space: nowrap; }
+@media (max-width: 767px) {
+  .hero__badge-main { font-size: 19px; }
+  .benefit__name { font-size: 25px; }
+}
