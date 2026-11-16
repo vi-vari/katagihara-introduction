@@ -642,3 +642,31 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .hero__circle--3 { width: calc(var(--hw) * .13); height: calc(var(--hw) * .13); right: calc(var(--hl) + var(--hw) * .21); }
   .hero__circle--4 { width: calc(var(--hw) * .17); height: calc(var(--hw) * .17); right: calc(var(--hl) + var(--hw) * .08); }
 }
+
+/* PC：特典枠を中央・1.5倍、コピーと丸を右へ約3cm（人物の後ろ） */
+@media (min-width: 768px) {
+  .hero__copy { z-index: 2 !important; left: calc(var(--hl) + var(--hw) * .03 + 113px); }
+  .hero__circle--1 { left: calc(var(--hl) + var(--hw) * .02 + 113px); }
+  .hero__photo { z-index: 3 !important; }
+  .hero__badge {
+    left: 50%; bottom: 5%; transform: translateX(-50%);
+    min-width: 450px; padding: 16px 60px 14px; border-width: 6px; border-radius: 30px;
+  }
+  .hero__badge-label { font-size: 21px; }
+  .hero__badge-main { font-size: 36px; }
+  .hero__badge-off { font-size: 36px; }
+  .hero__badge-off b { font-size: 108px; }
+  .hero__badge-note { font-size: 24px; bottom: -40px; }
+  .hero__badge::before, .hero__badge::after { transform-origin: center; scale: 1.5; top: -36px; }
+  .hero__badge::before { left: -26px; }
+  .hero__badge::after { right: -26px; }
+}
+@media (min-width: 768px) {
+  .hero__badge { bottom: 14px; padding: 12px 56px 10px; }
+  .hero__badge-note { position: static; transform: none; margin-top: 2px; font-size: 22px; }
+  .hero__badge-off b { font-size: 100px; }
+}
+/* 小さめのPC画面では特典枠を少し縮め、顔にかからないように */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero__badge { zoom: .78; }
+}
