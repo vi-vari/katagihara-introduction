@@ -562,3 +562,12 @@ h1, h2, h3, p { margin: 0; }
   .hero__badge-main { font-size: 19px; }
   .benefit__name { font-size: 25px; }
 }
+
+/* 固定バー：LINEボタンのみ */
+.fixed-bar__line { font-size: 15px; gap: 12px; }
+.fixed-bar__line small { font-size: 11px; }
+.fixed-bar__icon { flex-basis: 38px; height: 38px; font-size: 9px; }
+@media (min-width: 768px) {
+  .fixed-bar { max-width: 480px; }
+  .fixed-bar__line { font-size: 17px; }
+}
