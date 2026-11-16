@@ -670,3 +670,20 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 @media (min-width: 768px) and (max-width: 1199px) {
   .hero__badge { zoom: .78; }
 }
+
+/* PC：コピーと丸を左へ戻す／旗を人物の後ろ・文字の前に／特典枠を約3割縮小 */
+@media (min-width: 768px) {
+  .hero__copy { z-index: 2 !important; left: calc(var(--hl) + var(--hw) * .03 + 30px); }
+  .hero__circle--1 { left: calc(var(--hl) + var(--hw) * .02 + 30px); }
+  .hero__garland { z-index: 3 !important; height: auto; max-height: none; }
+  .hero__photo { z-index: 4 !important; }
+  .hero__badge { z-index: 5 !important; zoom: .7; bottom: 20px; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero__badge { zoom: .6; }
+}
+/* 重なり順：丸 < 旗 < コピー < 人物 < 特典枠（コピーが旗に隠れないように） */
+@media (min-width: 768px) {
+  .hero__garland { z-index: 2 !important; }
+  .hero__copy { z-index: 3 !important; }
+}
