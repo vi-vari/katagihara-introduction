@@ -626,3 +626,19 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .hero__copy { top: 20%; }
   .hero__badge { left: 36%; bottom: 7%; }
 }
+
+/* PC：画面が広くても人物や文字が大きくなりすぎないよう、1280px幅の見た目で固定 */
+@media (min-width: 768px) {
+  .hero { --hw: min(100vw, 1280px); --hl: calc(50% - var(--hw) / 2); height: clamp(500px, calc(var(--hw) * .42), 560px); }
+  .hero__garland { max-height: 150px; }
+  .hero__photo { width: calc(var(--hw) * .46); }
+  .hero__copy { left: calc(var(--hl) + var(--hw) * .03); }
+  .hero__lead { font-size: clamp(18px, calc(var(--hw) * .019), 24px); }
+  .hero__title { font-size: clamp(40px, calc(var(--hw) * .043), 56px); }
+  .hero__sub { font-size: clamp(26px, calc(var(--hw) * .03), 38px); }
+  .hero__badge { left: calc(var(--hl) + var(--hw) * .36); }
+  .hero__circle--1 { width: calc(var(--hw) * .34); height: calc(var(--hw) * .34); left: calc(var(--hl) + var(--hw) * .02); }
+  .hero__circle--2 { width: calc(var(--hw) * .15); height: calc(var(--hw) * .15); left: calc(var(--hl) + var(--hw) * .38); }
+  .hero__circle--3 { width: calc(var(--hw) * .13); height: calc(var(--hw) * .13); right: calc(var(--hl) + var(--hw) * .21); }
+  .hero__circle--4 { width: calc(var(--hw) * .17); height: calc(var(--hw) * .17); right: calc(var(--hl) + var(--hw) * .08); }
+}
