@@ -748,3 +748,7 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .voice__title { font-size: 28px; text-align: center; margin-bottom: 16px; }
   .voice__text { font-size: 19px; }
 }
+@media (min-width: 768px) {
+  .voice__body { align-self: center; }
+  .voice__side { flex-direction: row; align-items: center; flex-basis: auto; }
+}
