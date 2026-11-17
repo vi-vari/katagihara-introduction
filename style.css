@@ -763,3 +763,4 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 /* お客様の声：素材イラストに差し替え */
 img.voice__mega { height: auto; object-fit: contain; }
 img.voice__avatar { border-radius: 50%; background: #ffb31a; object-fit: cover; object-position: center top; }
+.process__img--treat { object-position: 50% 50%; }
