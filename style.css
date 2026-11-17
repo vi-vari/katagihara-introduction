@@ -705,3 +705,4 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .benefit__price .tax { font-size: 16px; }
 }
 @media (max-width: 767px) { .reason h3 { font-size: 19px; white-space: nowrap; } .reason h3 span { font-size: 26px; } }
+.process__img--care { object-position: 50% 40%; }
