@@ -752,3 +752,10 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .voice__body { align-self: center; }
   .voice__side { flex-direction: row; align-items: center; flex-basis: auto; }
 }
+
+/* お客様の声：カードを縦に並べる */
+.voice__viewport { overflow: visible; border-radius: 0; }
+.voice__track { flex-direction: column; gap: 22px; transform: none !important; }
+.voice__card { flex: 0 0 auto; }
+@media (min-width: 768px) { .voice__track { gap: 30px; } }
+@media (max-width: 420px) { .voice__title { font-size: 16px; white-space: nowrap; } }
