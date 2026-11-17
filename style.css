@@ -706,3 +706,45 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
 }
 @media (max-width: 767px) { .reason h3 { font-size: 19px; white-space: nowrap; } .reason h3 span { font-size: 26px; } }
 .process__img--care { object-position: 50% 40%; }
+
+/* =========================================
+   お客様の声（CSSだけのスライダー）
+   ========================================= */
+.sec--voice { background: #fff7b0; }
+.voice { max-width: 860px; margin: 0 auto; }
+.voice__radio { position: absolute; opacity: 0; pointer-events: none; }
+.voice__viewport { overflow: hidden; border-radius: 26px; }
+.voice__track { display: flex; transition: transform .45s ease; }
+.voice__card {
+  flex: 0 0 100%; display: flex; gap: 14px; background: #fff; border-radius: 26px;
+  padding: 22px 18px 26px; box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
+.voice__side { flex: 0 0 76px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.voice__mega { width: 54px; height: 54px; }
+.voice__avatar { width: 76px; height: 76px; }
+.voice__body { flex: 1; }
+.voice__title { font-family: var(--round); font-weight: 800; color: #f0506e; font-size: 18px; line-height: 1.4; margin-bottom: 10px; }
+.voice__text { font-size: 14px; color: #555; line-height: 1.8; }
+.voice__text em { font-style: normal; color: #f0506e; }
+#voice-2:checked ~ .voice__viewport .voice__track { transform: translateX(-100%); }
+#voice-3:checked ~ .voice__viewport .voice__track { transform: translateX(-200%); }
+.voice__nav { margin-top: 14px; }
+.voice__nav-set { display: none; align-items: center; justify-content: space-between; }
+#voice-1:checked ~ .voice__nav .voice__nav-set--1,
+#voice-2:checked ~ .voice__nav .voice__nav-set--2,
+#voice-3:checked ~ .voice__nav .voice__nav-set--3 { display: flex; }
+.voice__nav label {
+  width: 48px; height: 48px; display: grid; place-items: center; cursor: pointer;
+  background: #fff3a0; color: #222; font-size: 40px; font-weight: 700; line-height: 1; border-radius: 6px;
+  user-select: none;
+}
+.voice__nav label:hover { background: #ffe66b; }
+.voice__count { font-weight: 700; color: var(--navy); font-size: 14px; }
+@media (min-width: 768px) {
+  .voice__card { gap: 30px; padding: 36px 44px 40px 32px; }
+  .voice__side { flex-basis: 140px; align-items: flex-start; gap: 28px; }
+  .voice__mega { width: 96px; height: 96px; margin-left: 6px; }
+  .voice__avatar { width: 140px; height: 140px; }
+  .voice__title { font-size: 28px; text-align: center; margin-bottom: 16px; }
+  .voice__text { font-size: 19px; }
+}
