@@ -696,3 +696,12 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .benefit__sub { font-size: 22px; }
 }
 .process__img--treat { object-position: 50% 40%; }
+
+/* 税込表記（小さく） */
+.tax { font-size: 11px; font-weight: 700; margin-left: 2px; letter-spacing: 0; }
+.benefit__price .tax { font-size: 14px; }
+@media (min-width: 768px) {
+  .hero__badge-off .tax { font-size: 15px; }
+  .benefit__price .tax { font-size: 16px; }
+}
+@media (max-width: 767px) { .reason h3 { font-size: 19px; white-space: nowrap; } .reason h3 span { font-size: 26px; } }
