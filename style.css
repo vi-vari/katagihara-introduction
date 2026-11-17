@@ -695,3 +695,4 @@ img.worry__face { flex: 0 0 96px; width: 96px; height: auto; align-self: flex-en
   .hero__badge-sub { font-size: 22px; }
   .benefit__sub { font-size: 22px; }
 }
+.process__img--treat { object-position: 50% 40%; }
