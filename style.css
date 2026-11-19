@@ -783,3 +783,42 @@ img.voice__avatar { border-radius: 50%; background: #ffb31a; object-fit: cover; 
   .modal__box { margin-top: 0; }
   .modal__close { top: 0; width: 80px; height: 60px; font-size: 15px; }
 }
+
+/* =========================================
+   FV：人物を削除し、特典フレームを人物の位置・大きさで配置
+   ========================================= */
+.hero .hero__badge {
+  zoom: 1; position: relative !important; left: auto; bottom: auto; transform: none;
+  display: flex; width: calc(100% - 32px); max-width: 420px; min-width: 0;
+  margin: 26px auto 46px; padding: 22px 16px 20px;
+  border-width: 6px; border-radius: 28px;
+}
+.hero .hero__badge-label { font-size: 18px; }
+.hero .hero__badge-main { font-size: 30px; }
+.hero .hero__badge-sub { font-size: 18px; }
+.hero .hero__badge-off { font-size: 32px; }
+.hero .hero__badge-off b { font-size: 92px; }
+.hero .hero__badge-off .tax { font-size: 14px; }
+.hero .hero__badge-note { position: static; transform: none; font-size: 18px; margin-top: 6px; }
+
+@media (min-width: 768px) {
+  .hero .hero__badge {
+    position: absolute !important; z-index: 5 !important;
+    left: calc(50% + var(--hw) * .10); bottom: 4%; top: auto; transform: translateX(-50%);
+    width: calc(var(--hw) * .44); max-width: none; height: calc(var(--hw) * .33);
+    margin: 0; padding: 0 20px; justify-content: center;
+  }
+  .hero .hero__badge-label { font-size: calc(var(--hw) * .02); }
+  .hero .hero__badge-main { font-size: calc(var(--hw) * .036); }
+  .hero .hero__badge-sub { font-size: calc(var(--hw) * .02); }
+  .hero .hero__badge-off { font-size: calc(var(--hw) * .036); }
+  .hero .hero__badge-off b { font-size: calc(var(--hw) * .1); }
+  .hero .hero__badge-off .tax { font-size: calc(var(--hw) * .014); }
+  .hero .hero__badge-note { font-size: calc(var(--hw) * .02); margin-top: 8px; }
+  .hero .hero__badge::before, .hero .hero__badge::after { scale: 1.6; top: -40px; }
+  .hero .hero__badge::before { left: -30px; }
+  .hero .hero__badge::after { right: -30px; }
+}
+@media (min-width: 768px) {
+  .hero .hero__badge { left: calc(50% + var(--hw) * .17); width: calc(var(--hw) * .40); height: calc(var(--hw) * .32); bottom: 5%; }
+}
