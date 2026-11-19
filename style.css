@@ -775,3 +775,11 @@ img.voice__avatar { border-radius: 50%; background: #ffb31a; object-fit: cover; 
   .modal__close { top: -56px; height: 56px; width: 84px; font-size: 16px; }
   .modal__box { margin-top: 56px; }
 }
+
+/* closeボタンを白い枠の中の右上に戻す */
+.modal__box { margin-top: 0; }
+.modal__close { top: 0; right: 0; width: 64px; height: 52px; font-size: 13px; }
+@media (min-width: 768px) {
+  .modal__box { margin-top: 0; }
+  .modal__close { top: 0; width: 80px; height: 60px; font-size: 15px; }
+}
