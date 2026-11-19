@@ -822,3 +822,4 @@ img.voice__avatar { border-radius: 50%; background: #ffb31a; object-fit: cover; 
 @media (min-width: 768px) {
   .hero .hero__badge { left: calc(50% + var(--hw) * .17); width: calc(var(--hw) * .40); height: calc(var(--hw) * .32); bottom: 5%; }
 }
+.reason__img--price { object-position: 50% 30%; }
