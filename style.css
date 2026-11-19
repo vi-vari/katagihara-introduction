@@ -765,3 +765,13 @@ img.voice__mega { height: auto; object-fit: contain; }
 img.voice__avatar { border-radius: 50%; background: #ffb31a; object-fit: cover; object-position: center top; }
 .process__img--treat { object-position: 50% 50%; }
 .process__img--treat { object-position: 50% 45%; }
+
+/* お知らせ：closeボタンを枠の上に出して文字と重ならないように */
+.modal__box { margin-top: 48px; }
+.modal__close { top: -48px; right: 0; width: 72px; height: 48px; font-size: 14px; }
+.modal__text { font-size: 22px; line-height: 1.6; }
+@media (min-width: 768px) {
+  .modal__text { font-size: 30px; }
+  .modal__close { top: -56px; height: 56px; width: 84px; font-size: 16px; }
+  .modal__box { margin-top: 56px; }
+}
